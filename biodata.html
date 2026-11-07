@@ -1,85 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Araffi</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Formulir biodata Website Araffi."><title>Biodata | Website Araffi</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
 <body>
-
-    <!-- Header -->
-    <header id="header-biodata">
-        <h2 class="judul">Biodata Saya</h2>
-        <nav>
-            <a href="index.html" class="link-menu">Beranda</a>
-            <a href="biodata.html" class="link-menu">Biodata</a>
-        </nav>
-    </header>
-
-    <!-- Formulir Biodata -->
-    <main id="konten-biodata">
-        <h2 class="subjudul">Formulir Biodata</h2>
-
-        <form id="form-biodata" class="form-container">
-
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama"
-                   class="input-form"
-                   placeholder="Masukkan nama lengkap" required>
-
-            <label for="nim">NIM</label>
-            <input type="text" id="nim" name="nim"
-                   class="input-form"
-                   placeholder="Masukkan NIM" required>
-
-            <label for="jurusan">Jurusan</label>
-            <select id="jurusan" name="jurusan"
-                    class="input-form" required>
-                <option value="">Pilih jurusan</option>
-                <option value="Informatika">Informatika</option>
-                <option value="Sistem Informasi">Sistem Informasi</option>
-                <option value="Manajemen">Manajemen</option>
-                <option value="Akuntansi">Akuntansi</option>
-                <option value="Lainnya">Lainnya</option>
-            </select>
-
-            <!-- Alamat menggantikan Email -->
-            <label for="alamat">Alamat</label>
-            <textarea id="alamat" name="alamat"
-                      class="input-form" rows="3"
-                      placeholder="Masukkan alamat lengkap"
-                      required></textarea>
-
-            <label for="jenis-kelamin">Jenis Kelamin</label>
-            <select id="jenis-kelamin" name="jenis-kelamin"
-                    class="input-form" required>
-                <option value="">Pilih jenis kelamin</option>
-                <option value="Laki-laki">Laki-laki</option>
-                <option value="Perempuan">Perempuan</option>
-            </select>
-
-            <button type="submit" id="tombol-simpan">
-                Simpan Biodata
-            </button>
-
-        </form>
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer-biodata">
-        <p class="teks-footer">Website Araffi © 2026</p>
-    </footer>
-
-    <!-- Notifikasi -->
-    <script>
-        document.getElementById("form-biodata")
-            .addEventListener("submit", function(event) {
-                event.preventDefault();
-                alert("Biodata berhasil diisi!");
-            });
-    </script>
-
-</body>
-</html>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>ARAF<span class="accent">FI</span></span></a><button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Navigasi utama"><a href="index.html">Beranda</a><a href="about.html">Tentang</a><a href="skills.html">Keahlian</a><a href="projects.html">Proyek</a><a class="active" href="biodata.html">Biodata</a><a class="nav-cta" href="contact.html">Kontak</a></nav></div></header>
+<main>
+  <section class="page-hero compact-hero"><div class="container"><span class="eyebrow">PROFIL PRIBADI</span><h1>Formulir <span class="accent">Biodata.</span></h1><p>Formulir latihan untuk melengkapi informasi biodata.</p></div></section>
+  <section class="section form-section"><div class="container form-layout"><div class="form-aside"><span class="eyebrow">DATA DIRI</span><h2>Lengkapi informasi pada formulir.</h2><p>Isi kolom yang tersedia sesuai data kamu. Kolom bertanda wajib harus diisi sebelum formulir dikirim.</p><div class="form-tip"><span>ⓘ</span><p>Catatan: formulir ini merupakan demonstrasi HTML. Data tidak dikirim atau disimpan ke server maupun database.</p></div></div>
+    <form id="form-biodata" class="form-container demo-form">
+      <div class="form-field"><label for="nama">Nama Lengkap <span>*</span></label><input type="text" id="nama" name="nama" class="input-form" placeholder="Masukkan nama lengkap" autocomplete="name" required></div>
+      <div class="form-field"><label for="nim">NIM <span>*</span></label><input type="text" id="nim" name="nim" class="input-form" placeholder="Masukkan NIM" required></div>
+      <div class="form-field"><label for="jurusan">Program Studi <span>*</span></label><select id="jurusan" name="jurusan" class="input-form" required><option value="">Pilih program studi</option><option value="Informatika">Informatika</option><option value="Sistem Informasi">Sistem Informasi</option><option value="Manajemen">Manajemen</option><option value="Akuntansi">Akuntansi</option><option value="Lainnya">Lainnya</option></select></div>
+      <div class="form-field"><label for="alamat">Alamat <span>*</span></label><textarea id="alamat" name="alamat" class="input-form" rows="3" placeholder="Masukkan alamat" autocomplete="street-address" required></textarea></div>
+      <div class="form-field"><label for="jenis-kelamin">Jenis Kelamin <span>*</span></label><select id="jenis-kelamin" name="jenis-kelamin" class="input-form" required><option value="">Pilih jenis kelamin</option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></div>
+      <button type="submit" class="btn btn-primary form-submit">Kirim Biodata <span>→</span></button><p class="form-message" id="biodata-message" role="status" aria-live="polite"></p>
+    </form>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A</span><span>ARAF<span class="accent">FI</span></span></a><p>Website Araffi · Dibuat untuk pembelajaran web.</p><span>© 2026 Araffi</span></div></footer>
+</body></html>
